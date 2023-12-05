@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content %}
+
+
+<div class="container text-center">
+
+
+    {% for item in items %}
+    <table class="table table-dark table-hover" >
+    <th scope="row" class="align-middle">Nombre: {{ item.name }}</th>
+    <th scope="row" class="align-middle">Precio: {{ item.price }}</th>
+    <th scope="row" class="align-middle">Descripcion: {{ item.description }}</th>
+    {% if item.photo %}
+    <th>Imagen: <img class="img-fluid rounded mb-1" src= {{ item.photo.url}} alt="item"/> </th>
+    {% endif %}
+    {% if user.username == item.user.username %}
+        <th><a class="btn btn-primary" href="{% url 'update_item' item.id %}">Editar</a></th>
+        <th><a class="btn btn-primary" href="{% url 'delete_item' item.id %}">Eliminar</a></th>
+        {% endif %}
+    </table>
+    {% endfor %}
+
+<th><a class="btn btn-primary" href="{% url 'create_item' %}">Crear</a></th>
+
+</div>
+
+{% endblock %}

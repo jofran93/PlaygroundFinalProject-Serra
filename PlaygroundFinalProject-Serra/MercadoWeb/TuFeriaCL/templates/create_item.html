@@ -1,0 +1,16 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content  %}
+
+
+<form method ="POST" class="container text-center" enctype="multipart/form-data">
+    {% csrf_token %}
+    
+{{ formitem.as_p}}
+
+        <div class="form-floating mb-3"><button class="btn btn-primary" style=" width: 5vw; margin-left : 0vw; margin-Top : 0vw;" type="submit">Guardar</button>
+            <a class="btn btn-primary" style=" width: 5vw; margin-left : 0vw; margin-Top : 0vw;" href="{% url 'item_list' %}">Volver</a></div>
+</form>
+
+
+{% endblock %}

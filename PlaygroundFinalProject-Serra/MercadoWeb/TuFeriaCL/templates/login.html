@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content  %}
+
+{% if error %}
+<p>{{ error }}</p>
+{% endif %}
+<br>
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+
+        <button type="submit" class="btn btn-primary">Entrar</button>
+</form>
+
+
+{% endblock %}

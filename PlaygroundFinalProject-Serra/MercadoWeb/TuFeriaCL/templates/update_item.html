@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content  %}
+
+<section class="bg-light">
+    <div class="container">
+        <form class="p-1 p-lg-3"   method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <table class="table table-borderless col-md-25 fst-italic ">
+                {{ form.as_table }}
+            </table>
+            <div py-3 py-lg-2>
+                <button class="btn btn-primary"> Guardar</button>
+                <a class="btn btn-primary" href={% url 'item_list' %} role="button"> Cancelar</a>
+            </div>
+        </form>
+    </div>
+</section>
+
+{% endblock %}

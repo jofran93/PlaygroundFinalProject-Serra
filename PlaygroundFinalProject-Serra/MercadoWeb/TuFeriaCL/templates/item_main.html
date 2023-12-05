@@ -1,0 +1,13 @@
+{% extends "index.html" %}
+{% block content  %}
+
+
+
+
+<a class="btn btn-primary" href="{% url 'create_item' %}">Publicar Articulo</a>
+<a class="btn btn-primary" href="{% url 'update_item' %}">Editar Articulo</a>
+<a class="btn btn-primary" href="{% url 'delete_item' %}">Eliminar Articulo</a>
+<a class="btn btn-primary" href="{% url 'item_list' %}">Lista de Articulos</a>
+
+
+{% endblock %}

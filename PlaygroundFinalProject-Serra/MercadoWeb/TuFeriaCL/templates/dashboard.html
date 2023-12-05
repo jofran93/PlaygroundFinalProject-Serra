@@ -1,0 +1,18 @@
+{% extends "index.html" %}
+{% load static %}
+{% block content  %}
+<title>Inicio de Sesión Exitoso</title>
+<h1>Sesión Iniciada</h1>
+
+<div class="container">
+    <div class="success-message">¡Inicio de Sesión Exitoso!</div>
+    
+    
+    <a class="btn btn-primary" href="{% url 'profile' %}">Perfil</a>
+    <a class="btn btn-primary" href="{% url 'item_list' %}">Articulos</a>
+    
+</div>
+
+
+
+{% endblock %}
