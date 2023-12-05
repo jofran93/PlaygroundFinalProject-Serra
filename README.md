@@ -2,6 +2,8 @@
 #### Comisión: 56040
 #### Alumno: Jose Serra
 
+### Video Explicando el Proyecto :https://youtu.be/EwrSz_m1egI
+
 ## Nombre del Proyecto
 TuFeriaCL/Venta de Articulos Web
 
